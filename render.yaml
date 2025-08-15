@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: popicron
+    env: docker
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
+
