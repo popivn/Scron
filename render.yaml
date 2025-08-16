@@ -1,10 +1,12 @@
- services:
+  services:
   - type: web
     name: popicron
-    env: php
-    autoDeploy: true
+    runtime: node
     plan: free
+    autoDeploy: true
     healthCheckPath: /
+    buildCommand: ""
+    startCommand: "php -S 0.0.0.0:10000"
     envVars:
       - key: APP_ENV
         value: production
