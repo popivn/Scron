@@ -43,15 +43,15 @@ var loaderHtml = `
 	</div>
 `;
 
-document.addEventListener('DOMContentLoaded', function() {
-	if (!document.getElementById('scifi-door-loader')) {
-		document.body.insertAdjacentHTML('afterbegin', loaderHtml);
-	}
+// document.addEventListener('DOMContentLoaded', function() {
+// 	if (!document.getElementById('scifi-door-loader')) {
+// 		document.body.insertAdjacentHTML('afterbegin', loaderHtml);
+// 	}
 
-	// Initialize loader after it is inserted into DOM
-	scifiLoader = new SciFiLoader();
-	scifiLoader.start();
-});
+// 	// Initialize loader after it is inserted into DOM
+// 	scifiLoader = new SciFiLoader();
+// 	scifiLoader.start();
+// });
 
 class SciFiLoader {
     constructor() {

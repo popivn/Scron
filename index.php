@@ -1,3 +1,8 @@
+<?php
+require_once 'db.php';
+require_once 'helpers.php';
+require_once 'web.php';
+?>
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -14,7 +19,8 @@
   <body>
     <div class="content-wrapper">
       <main class="container py-4">
-        <?php include 'view/cron/index.php'; ?>
+
+        <?php include 'view/cron/list.php'; ?>
       </main>
     </div>
     <footer>
