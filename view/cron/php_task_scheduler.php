@@ -1,4 +1,4 @@
-<?php
+ <?php
 // Đặt múi giờ cho PHP
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 
