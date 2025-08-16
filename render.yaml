@@ -1,7 +1,6 @@
   services:
   - type: web
     name: popicron
-    runtime: node
     plan: free
     autoDeploy: true
     healthCheckPath: /
