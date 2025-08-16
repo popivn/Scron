@@ -4,6 +4,8 @@
  * File này được gọi từ CronController.php
  * Nó sẽ hiển thị danh sách job và các thông báo.
  */
+
+
 ?>
 <div class="container my-5">
     <div class="card shadow-sm">
@@ -49,9 +51,11 @@
                                     <td><?= htmlspecialchars($job['last_run'] ?? 'Chưa bao giờ') ?></td>
                                     <td>
                                         <?php if ($job['status'] === 1): ?>
-                                            <span class="badge bg-success">Thành công</span>
+                                            <span class="badge bg-success">Đang Chạy</span>
+                                            <button class="btn btn-sm btn-warning toggle-cron" data-id="<?= $job['id'] ?>">Tắt</button>
                                         <?php else: ?>
-                                            <span class="badge bg-danger">Thất bại</span>
+                                            <span class="badge bg-danger">Đã Tắt</span>
+                                            <button class="btn btn-sm btn-success toggle-cron" data-id="<?= $job['id'] ?>">Bật</button>
                                         <?php endif; ?>
                                     </td>
                                 </tr>
