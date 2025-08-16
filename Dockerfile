@@ -1,8 +1,12 @@
 # Sử dụng image PHP chính thức
 FROM php:8.2-apache
 
-# Cập nhật danh sách gói và cài đặt các thư viện cần thiết trong một RUN duy nhất để tránh lỗi và đảm bảo các dependency được cập nhật
+# Sửa lỗi cài đặt: cập nhật ca-certificates và apt-transport-https, fix missing, và kiểm tra lỗi
 RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        apt-transport-https \
+        ca-certificates && \
+    apt-get update --fix-missing && \
     apt-get install -y --no-install-recommends \
         libzip-dev \
         zip \
