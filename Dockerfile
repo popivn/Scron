@@ -12,6 +12,5 @@ RUN chown -R www-data:www-data /var/www/html
 # Expose HTTP port
 EXPOSE 80
 
-# Default command provided by base image
-# CMD ["apache2-foreground"]
+# Default command provided by base image# CMD ["apache2-foreground"]
 

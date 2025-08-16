@@ -1,12 +1,10 @@
-services:
+ services:
   - type: web
     name: popicron
-    env: docker
+    env: php
     autoDeploy: true
-    dockerfilePath: ./Dockerfile
     plan: free
     healthCheckPath: /
     envVars:
       - key: APP_ENV
         value: production
-
